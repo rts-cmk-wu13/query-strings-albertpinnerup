@@ -30,9 +30,7 @@ console.log( sectionElm.querySelectorAll(".destinations__favorite"));
         sectionElm.querySelectorAll(".destinations__favorite").forEach(function(button) {
 
             button.addEventListener("click", function(e) {
-                let currentId = e.target.dataset.favid;
-
-                console.log(e.target.getAttribute("data-favid"));
+                let currentId = e.target.closest("button").dataset.favid;
                 
                 
                 if (favorites.includes(currentId)) {
