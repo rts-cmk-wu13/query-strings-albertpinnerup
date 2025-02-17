@@ -14,6 +14,10 @@
 	margin: 0 auto;
 }
 
+.favorited {
+	color: rgb(233, 23, 23);
+}
+
 p {
 	padding-bottom: 1em;
 }
