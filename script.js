@@ -3,7 +3,7 @@ const root = document.querySelector("#root");
 
 
 
-fetch("/data/destinations.json")
+fetch("./data/destinations.json")
     .then(response => response.json())
     .then(data => {
 
