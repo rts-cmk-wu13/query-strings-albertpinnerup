@@ -1,0 +1,49 @@
+.destinations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+    padding: 2.3125rem 7.5rem;
+    gap: 1rem;
+}
+
+.destinations__title {
+    grid-column: 1/-1;
+    font-size: 3rem;
+}
+
+.destinations__card {
+    max-width: 288px;
+}
+
+.destinations__img {
+    max-width: 288px;
+    height: 288px;
+}
+
+.destinations__img img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.destinations__more {
+    background-color: #CEF9FF;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.75rem 1.0625rem ;
+    align-items: center;
+}
+
+.destinations__favorite, .details__favorite {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.destinations__favorite i {
+    padding: 0.5rem;
+}
+
+.destinations__details {
+    text-decoration: none;
+    color: black;
+}

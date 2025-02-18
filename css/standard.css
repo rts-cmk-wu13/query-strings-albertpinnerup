@@ -1,0 +1,30 @@
+@charset "UTF-8";
+@import url(listevisning.css);
+@import url(details.css);
+
+/* CSS Document */
+* {
+	margin: 0; 
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#root {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+.favorited {
+	color: rgb(233, 23, 23);
+}
+
+p {
+	padding-bottom: 1em;
+}
+
+/* RWD: */
+img {
+	width: 100%;
+	height: auto;
+	display: block;
+}

@@ -1,0 +1,60 @@
+.details {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.details__img {
+    max-width: 712px;
+    height: 832px;
+    grid-column: span 2;
+    position: relative;
+}
+
+.details__favorite {
+    position: absolute;
+    top: 31px;
+    right: 31px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+
+}
+
+.details__favorite--text {
+    margin-left: 1rem;
+}
+
+.details__favorite [class^="fa"] {
+    font-size: 24px;
+}
+
+.details__img img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.details__info {
+    grid-column: span 2;
+    padding: 3.4375rem;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: center;
+}
+
+.details__destination, .details__title, .details__subtitle {
+    text-align: center;
+}
+
+.details__destination {
+    font-size: 20px;
+}
+
+.details__title {
+    font-size: 32px;
+}
+
+.details__facilities li {
+    list-style-position: inside;
+}
