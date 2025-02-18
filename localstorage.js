@@ -28,6 +28,6 @@ function removeFromLocalStorage(key) {
     localStorage.removeItem(key)
 }
 
-let favorites = readFromLocalStorage("favorites") || []
+//let favorites = readFromLocalStorage("favorites") || []
 
 
