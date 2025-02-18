@@ -7,7 +7,7 @@ const body = document.querySelector("body");
 let root = document.createElement("div");
 root.id = "root"
 
-let favorite = readFromLocalStorage("favorites")
+// let favorite = readFromLocalStorage("favorites") 
 
 fetch(`/data/${id}.json`)
     .then(response => response.json())
@@ -40,30 +40,24 @@ fetch(`/data/${id}.json`)
             facilitesList.appendChild(li)
         });
         
-        let favoriteIcon = sectionElm.querySelector(".fa-heart");
+        let favoriteIcon = sectionElm.querySelector(".details__favorite .fa-heart");
         let currentId = favoriteIcon.dataset.favid
 
-        if (favorite.includes(currentId)) {
+        if (favorites.includes(currentId)) {
             favoriteIcon.classList.add("favorited")
         } 
         
+        sectionElm.querySelector(".details__favorite").addEventListener("click", (e) => {
 
-        sectionElm.querySelector(".details__favorite").addEventListener("click", () => {
-            let currentId = favoriteIcon.dataset.favid
-            console.log(currentId);
-            
-
-            if (favorite.includes(currentId)) {
-                let newFavorites = favorite.filter(id => id != currentId);
-                favorite = newFavorites;
-                e.target.classList.remove("favorited")
-                console.log(favorite);
+            if (favorites.includes(currentId)) {
+                newFavorites = favorites.filter(id => id != currentId)
+                favorites = newFavorites
+                favoriteIcon.classList.remove("favorited")
             } else {
-                favorite.push(currentId);
-                e.target.classList.add("favorited")
-                console.log(favorite);
+                favorites.push(currentId)
+                favoriteIcon.classList.add("favorited")
             }
-            saveTolocalStorage("favorites", favorite); 
+            saveTolocalStorage("favorites", favorites)
         })
 
 

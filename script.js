@@ -1,6 +1,6 @@
 const root = document.querySelector("#root");
 
-let favorites = readFromLocalStorage("favorites") || []
+
 
 
 fetch("/data/destinations.json")
