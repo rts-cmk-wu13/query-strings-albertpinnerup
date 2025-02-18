@@ -17,14 +17,13 @@ fetch("/data/destinations.json")
                     <img src="img/${destination.image}">
                 </div>
                 <div class="destinations__more">
-                    <button class="destinations__favorite ${favorites.includes(destination.id.toString()) ? "favorited" : ""}" data-favid="${destination.id}"><i class="fa-solid fa-heart"></i></button>
+                    <button class="destinations__favorite" data-favid="${destination.id}"><i class="fa-solid fa-heart ${favorites.includes(destination.id.toString()) ? "favorited" : ""}"></i></button>
                     <a href="details.html?id=${destination.id}" class="destinations__details">MORE</a>
                 </div>
             </div>
         `
         ).join("")
 
-console.log( sectionElm.querySelectorAll(".destinations__favorite"));
 
 
         sectionElm.querySelectorAll(".destinations__favorite").forEach(function(button) {

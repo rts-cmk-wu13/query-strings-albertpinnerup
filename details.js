@@ -47,7 +47,7 @@ fetch(`/data/${id}.json`)
             favoriteIcon.classList.add("favorited")
         } 
         
-        sectionElm.querySelector(".details__favorite").addEventListener("click", (e) => {
+        sectionElm.querySelector(".details__favorite").addEventListener("click", () => {
 
             if (favorites.includes(currentId)) {
                 newFavorites = favorites.filter(id => id != currentId)
