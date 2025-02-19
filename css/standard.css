@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url(listevisning.css);
 @import url(details.css);
+@import url(darkmode.css);
 
 /* CSS Document */
 * {
@@ -9,9 +10,15 @@
 	box-sizing: border-box;
 }
 
+html {
+	font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
 #root {
 	max-width: 1440px;
 	margin: 0 auto;
+	padding: 2.3125rem 7.5rem;
+	display: grid;
 }
 
 .favorited {
@@ -27,4 +34,27 @@ img {
 	width: 100%;
 	height: auto;
 	display: block;
+}
+
+:root {
+    color-scheme: light dark;
+    --dark-color: rgb(26, 26, 26);
+    --light-color: rgb(247, 247, 247);
+}
+
+[data-dark="true"] {
+    color-scheme: dark;
+}
+
+[data-dark="false"] {
+    color-scheme: light;
+}
+
+html, input, textarea {
+   color: light-dark(var(--dark-color), var(--light-color));
+   background-color: light-dark(var(--light-color), var(--dark-color))
+}
+
+input, textarea {
+    border: 1px solid light-dark(var(--dark-color), var(--light-color));
 }

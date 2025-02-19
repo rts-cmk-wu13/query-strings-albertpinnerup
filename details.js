@@ -2,10 +2,8 @@ let search = window.location.search;
 let params = new URLSearchParams(search);
 let id = params.get("id");
 
-const body = document.querySelector("body");
+const root = document.querySelector("#root");
 
-let root = document.createElement("div");
-root.id = "root"
 
 // let favorite = readFromLocalStorage("favorites") 
 
@@ -62,5 +60,4 @@ fetch(`/data/${id}.json`)
 
 
         root.append(sectionElm)
-        body.append(root)
     })

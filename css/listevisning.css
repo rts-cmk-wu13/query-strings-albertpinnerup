@@ -1,7 +1,7 @@
 .destinations {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
-    padding: 2.3125rem 7.5rem;
+    /* padding: 2.3125rem 7.5rem; */
     gap: 1rem;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .destinations__more {
-    background-color: #CEF9FF;
+    background-color: light-dark(#CEF9FF, #394242);
     display: flex;
     justify-content: space-between;
     padding: 1.75rem 1.0625rem ;
@@ -45,5 +45,5 @@
 
 .destinations__details {
     text-decoration: none;
-    color: black;
+    color: ligtht-dark(black, var(--light-color));
 }
