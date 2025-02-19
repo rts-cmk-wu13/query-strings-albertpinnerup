@@ -1,0 +1,38 @@
+.switch {
+    position: relative;
+    display: flex;
+    width: auto;
+    height: auto;
+    justify-self: end;
+    margin-bottom: 1rem;
+    align-items: center;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .switch label {
+    width: auto;
+    display: inline-block;
+  }
+
+  .switch [class^="fa"] {
+    font-size: 24px;
+  }
+  
+  .fa-sun {
+    color: rgb(229, 232, 56);
+  }
+
+  .fa-moon {
+    color: rgb(31, 31, 110);
+  }
+
+  .switch p {
+    padding: 0;
+    padding-right: 0.5rem;
+  }
