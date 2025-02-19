@@ -31,3 +31,5 @@ function removeFromLocalStorage(key) {
 let favorites = readFromLocalStorage("favorites") || []
 
 
+
+

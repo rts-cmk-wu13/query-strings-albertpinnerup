@@ -7,7 +7,6 @@ let sun = document.querySelector(".fa-sun")
 let darkTxt = document.querySelector(".dark")
 let ligthTxt = document.querySelector(".light")
 
-
 let darkState = null
 
 if(isDarkMode == null || isDarkMode == undefined) {
